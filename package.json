@@ -1,0 +1,23 @@
+{
+  "name": "ringindia-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ring India — call centre, telemarketing and lead generation services. Next.js rebuild of ringindia.net.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "extract": "node scripts/extract-content.mjs",
+    "verify": "node scripts/verify-project.mjs",
+    "links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

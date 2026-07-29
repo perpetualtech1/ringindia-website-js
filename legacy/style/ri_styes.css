@@ -1,0 +1,126 @@
+/* CSS Document */
+
+/* Anchor Styles Starts */
+A { FONT-FAMILY: verdana; TEXT-DECORATION: none;}
+a:link { text-decoration: none; color:#0033FF;}
+a:visited { text-decoration: none; color:#0033FF; }
+a:hover { text-decoration: underline; }
+a:active { text-decoration: none; color:#003333; }
+/* Anchor Styles End */
+
+/* Style for Top Menu */
+a.mtop {font-family:verdana; text-decoration:none; font-size:9px; color: #0066FF; }
+.tmbar { font-family: arial; font-size:9px; color:#000066; border-bottom: #FF9933 1px solid; height:19px; vertical-align:bottom;}
+.footer { font-family: verdana; font-size:10px; color:#000066; line-height:15px; }
+.tmbartop { font-family: arial; font-size:10px; color:#000066; border-top: #FF9933 1px dotted; border-bottom: #FF9933 1px dotted;
+ border-right: #FF9933 1px dotted; }
+.tmbar1 { font-family: arial; font-size:10px; color:#000066; border-top: #FF9933 ; }
+.umbar { font-family: arial; font-size:12px; color:#000066; border-top: #FF9933 1px dotted; }
+
+/* Body */
+body { margin:0px; }
+
+/*  List Style */
+li { font-family: Verdana; font-size: 9pt;}
+
+.style3 {color: #000000}
+
+/* Body Description styles */
+p.desc{ padding: 3px 3px 3px 3px; color: #333333; font-family:verdana; font-size:12px; }
+
+/*background-color:#003366;*/
+/* Ends */
+
+/* Home Page Services Description styles */
+.hd { padding: 3px 3px 3px 3px; color: #000000; background-image:url(http://www.ringindia.net/img/tb_bg.jpg); font-family: verdana; font-size:11px;
+font-weight: bold	; text-align:center; height: 12px; }
+.hd1 { padding: 3px 3px 3px 3px; color:#00366C; font-family: verdana; font-size:12px; text-align:center; height: 12px; }
+
+.face
+{
+font-family:Arial;
+font-size:12px;
+}
+
+.fbd
+{
+font-family:verdana;
+font-size:12px;
+}
+.eok
+{
+font-family:Verdana;
+font-size:12px;
+}
+
+.bd
+{
+padding: 5px 5px 5px 5px;
+color:#333333;
+background-image:url(http://www.ringindia.net/img/tb_bg_bt.jpg);
+font-family: verdana;
+font-size:10px;
+text-align:justify;
+}
+.btext
+{
+font-family:Verdana;
+font-size:16px;
+color:#333399;
+font-weight:bold;
+}
+.vtext
+{
+font-family:Arial;
+font-size:11px;
+}
+.comment
+{
+font-family:Verdana;
+font-size:10px;
+}
+.poll
+{
+color:#ffffff;
+background-color:#000066;
+font-family:Verdana;
+font-size:12px;
+font-weight:bold;
+height:20px;
+width:35px;
+}
+/* Home Page Services Description styles */
+
+/* Starts - Style Effect for BOX */
+.box4 { border:#000000 1px solid; }
+.boxlr {
+font-family:Arial;
+font-size:10px;
+margin:0px;
+border-collapse:collapse;
+border:#ff6600 2px dotted ; }
+.sbox { border-left:#000000 1px solid; border-right:#000000 1px solid; }
+.box_3side { border-left:#000000 1px solid; border-right:#000000 1px solid; border-bottom:#000000 1px solid; background-image:url(http://www.ringindia.net/img/tb_bg_bt.jpg);}
+.style71 {color: #000000; font-size: 12px; }
+.nletter
+{
+font-family:Arial;
+font-size:12px;
+color:#FFFFFF;
+font-weight:bold;
+background-color:#6893c2; font-style:italic; border-color:#FFFFFF; border-style: double;
+}
+.ind-menu
+{
+font-family:Arial;
+font-size:12px;
+color:#000000;
+font-weight:bold;
+background-color:#D0E1F1;
+border-color:#333333;
+border: 1px solid #333333;
+width:20px;
+height:5px;
+}
+
+/* Ends - Style Effect for BOX */

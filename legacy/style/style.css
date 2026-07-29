@@ -1,0 +1,243 @@
+/* CSS Document */
+
+.linkAdH a
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#FFFFFF;
+background-color:#336699;
+display:inline;
+font-weight:bold;
+vertical-align:text-top;
+}
+
+.linkAdV a
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#FFFFFF;
+background-color:#336699;
+display:block;
+font-weight:bold;
+vertical-align:text-top;
+}
+
+
+.lft_full_menu
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color:#000000;
+	font-weight:bold;
+	background-color:#ffffff;
+	display:block;	
+	text-decoration:none;
+	padding: 3px 3px 3px 3px;
+	background-image:url(../images/M-indent.gif);
+	background-repeat:no-repeat;	
+}
+
+
+#lft_full_menu a
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color:#FFFFFF;
+	border:1px solid #000000;
+	background-color:#990000;
+	display:block;	
+	text-decoration:none;
+	padding: 3px 3px 3px 3px;
+	background-image:url(../images/M-indent-A.gif);
+	background-repeat:no-repeat;	
+}
+
+#lft_full_menu a:hover
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color: #ffffff;
+	border:1px solid #000000;
+	background-color:#666666;
+	display:block;	
+	text-decoration:none;
+	padding: 3px 3px 3px 3px;
+	background-image:url(../images/M-indent-H.gif);
+	background-repeat:no-repeat;
+}
+
+
+.box
+{
+ border:1px #666666 solid;
+}
+
+.bdydesc
+{
+ font-family: Arial; font-size: 12px; text-align: justify; padding: 10px 10px 10px 10px;
+}
+
+
+.floating
+{
+float:right;
+padding-bottom:3px;
+padding-top:3px;
+padding-left:3px;
+}
+
+.lftfloating
+{
+float:left;
+padding-bottom:3px;
+padding-top:3px;
+padding-right:3px;
+}
+
+.Bline
+{
+border-bottom:1px #000000 solid;
+}
+
+#lft_menu a
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color:#FFFFFF;
+	border:1px solid #000000;
+	background-color:#990000;
+	display:block;	
+	text-decoration:none;
+	padding: 3px 3px 3px 3px;
+}
+
+#lft_menu a:hover
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	color: #FFFFFF;
+	border:1px solid #000000;
+	background-color:#666666;
+	display:block;	
+	text-decoration:none;
+	padding: 3px 3px 3px 3px;	
+}
+
+
+.topdesc
+{
+font-family: Arial; font-size: 10pt; text-align: justify;
+}
+
+.menu a
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: center;
+	color:#4567EF;
+	border-bottom:1px solid #000000;
+	border-top:1px solid #000000;
+	background-color:#FFFFFF;
+	display:block;	
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.menu a:hover
+{
+	font-family: Arial;
+	font-size: 12px;
+	text-align: center;
+	color: #FFFFFF;
+	border-bottom:1px solid #000000;
+	border-top:1px solid #000000;
+	background-color:#000000;
+	display:block;	
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+body { padding-top:5px; padding-bottom:5px; margin-bottom:0; margin-left:0; margin-right:0; background-image:url(../t_menu/bg.jpg); }
+.style1 {color: #FF0000;
+		font-size:14px;}
+
+
+.style4 {color: #000099;
+	     font-weight: bold;
+		 font-size:14px;
+			}
+
+.links{
+	font-size: 14px;
+	color:#FFFFFF;
+	font-family:Verdana;
+	font-weight:bold;
+}
+
+.style9 {
+	font-family: Verdana;
+	font-weight: bold;
+	color: #990000;
+	font-size:16px;
+}
+
+.user{
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight:bold;
+font-size:12px;
+font-style:italic;
+color:#000000;
+}
+
+.buser{
+padding: 5px 5px 5px 5px;
+font-family:Garamond;
+font-size:14;
+font-style:italic;
+color:#990000;
+}
+
+.bx
+{
+border-bottom:1px #000000 solid;
+border-top:1px #000000 solid;
+border-left:1px #000000 solid;
+border-right:1px #000000 solid;
+}
+
+
+.tdh
+{
+padding: 5px 5px 5px 5px;
+font-family:Garamond;
+font-size:14;
+color:#990000;
+}
+
+.tdd
+{
+padding: 3px 3px 3px 3px;
+font-family:Garamond;
+font-size:12;
+color:#006600;
+}
+
+
+label
+
+{
+font-family:verdana;
+font-weight:bold;
+font-size:13px;
+color:#333333;
+}
+
+.red
+{
+color:#FF0000}
