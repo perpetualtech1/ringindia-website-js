@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { serviceNav } from '@/content/nav'
+import { siteCopy } from '@/content/pages'
 
 /**
  * The full service taxonomy, carried over from the legacy inner-page sidebar.
@@ -12,7 +13,7 @@ export default function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <nav className="sidebar" aria-label="Services">
+    <nav className="sidebar" aria-label={siteCopy.ui.sidebarLabel}>
       {serviceNav.map((group) => (
         <div className="sidebar__group" key={group.title}>
           <h2 className="sidebar__title">{group.title}</h2>

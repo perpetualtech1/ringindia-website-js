@@ -1,23 +1,23 @@
 import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
 import { serviceNav, utilityNav, legalNav } from '@/content/nav'
+import { siteCopy } from '@/content/pages'
 
 export const metadata = {
-  title: 'Site Map',
-  description:
-    'Every page on ringindia.net — call center services, lead generation, telemarketing, BPO and company information.',
+  title: siteCopy.siteMap.heading,
+  description: siteCopy.siteMap.metaDescription,
   alternates: { canonical: '/site-map' },
 }
 
 /** Built from the same nav data the sidebar uses, so it can never drift. */
 const groups = [
-  { title: 'Company', links: [...utilityNav, ...legalNav] },
+  { title: siteCopy.siteMap.companyGroup, links: [...utilityNav, ...legalNav] },
   ...serviceNav,
 ]
 
 export default function SiteMapPage() {
   return (
-    <PageLayout heading="Site Map" showSidebar={false}>
+    <PageLayout heading={siteCopy.siteMap.heading} showSidebar={false}>
       <div className="sitemap-grid">
         {groups.map((group) => (
           <section key={group.title}>

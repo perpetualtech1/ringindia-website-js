@@ -5,6 +5,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { primaryNav, utilityNav } from '@/content/nav'
+import { siteCopy } from '@/content/pages'
+
+const ui = siteCopy.ui
 
 export default function Header() {
   const pathname = usePathname()
@@ -22,7 +25,7 @@ export default function Header() {
       <div className="utility-bar">
         <div className="shell">
           <Link href="/lead-generation" className="utility-bar__lead">
-            Lead Generation Services
+            {ui.utilityLead}
           </Link>
           <ul className="utility-bar__links">
             {utilityNav.map((item) => (
@@ -38,10 +41,10 @@ export default function Header() {
 
       <header className="site-header">
         <div className="shell">
-          <Link href="/" className="site-header__logo" aria-label="Ring India — home">
+          <Link href="/" className="site-header__logo" aria-label={ui.logoLabel}>
             <Image
               src="/image/Ring-india-Logo.gif"
-              alt="Ring India"
+              alt={ui.logoAlt}
               width={223}
               height={81}
               priority
@@ -56,10 +59,10 @@ export default function Header() {
             aria-controls="primary-nav"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? 'Close' : 'Menu'}
+            {open ? ui.menuClose : ui.menuOpen}
           </button>
 
-          <nav aria-label="Primary">
+          <nav aria-label={ui.primaryNavLabel}>
             <ul className="primary-nav" id="primary-nav" data-open={open}>
               {primaryNav.map((item) => (
                 <li key={item.href}>
