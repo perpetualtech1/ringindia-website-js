@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import Sidebar from './Sidebar'
+import { siteCopy } from '@/content/pages'
+
+const ui = siteCopy.ui
 
 /**
  * Shared inner-page shell: banner strip, service sidebar, breadcrumb, article.
@@ -17,10 +20,10 @@ export default function PageLayout({ heading, children, showSidebar = true }) {
           {showSidebar && <Sidebar />}
 
           <article>
-            <nav className="breadcrumb" aria-label="Breadcrumb">
+            <nav className="breadcrumb" aria-label={ui.breadcrumbLabel}>
               <ol>
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/">{ui.breadcrumbHome}</Link>
                 </li>
                 <li aria-current="page">{heading}</li>
               </ol>

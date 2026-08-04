@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import LeadCard from '@/components/LeadCard'
-import { company, homeLeadCards, primaryServices } from '@/content/pages'
+import { company, homeLeadCards, primaryServices, siteCopy } from '@/content/pages'
+
+const copy = siteCopy.home
 
 export const metadata = {
-  title:
-    'Ring India — Outbound Telemarketing, Call Center Services & Lead Generation',
+  title: siteCopy.metaTitle,
   description: company.description,
   alternates: { canonical: '/' },
 }
@@ -15,14 +16,14 @@ export default function HomePage() {
       <section className="hero">
         <div className="shell">
           <div className="hero__inner">
-            <h1>Quality, efficiency and dedication — on every call</h1>
+            <h1>{copy.heroHeading}</h1>
             <p className="hero__lede">{company.description}</p>
             <div className="hero__actions">
               <Link href="/contact" className="button button--primary">
-                Get a free quote
+                {copy.primaryAction}
               </Link>
               <Link href="/lead-generation" className="button button--secondary">
-                Explore lead generation
+                {copy.secondaryAction}
               </Link>
             </div>
           </div>
@@ -31,7 +32,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="shell">
-          <h2>What we do</h2>
+          <h2>{copy.servicesHeading}</h2>
           <p className="section__intro">{company.intro}</p>
           <ul className="pill-list">
             {primaryServices.map((service) => (
@@ -45,11 +46,11 @@ export default function HomePage() {
 
       <section className="section section--sunken">
         <div className="shell">
-          <h2>Leads we generate</h2>
+          <h2>{copy.leadsHeading}</h2>
           <p className="section__intro">{company.facilities}</p>
           <ul className="card-grid">
             {homeLeadCards.map((card) => (
-              <LeadCard key={card.href} {...card} />
+              <LeadCard key={card.href} {...card} cta={copy.cardCta} />
             ))}
           </ul>
         </div>
@@ -57,14 +58,11 @@ export default function HomePage() {
 
       <section className="section">
         <div className="shell">
-          <h2>Ready to talk?</h2>
-          <p className="section__intro">
-            Tell us what you need and we will route your enquiry to the right
-            specialist.
-          </p>
+          <h2>{copy.ctaHeading}</h2>
+          <p className="section__intro">{copy.ctaBody}</p>
           <div className="hero__actions">
             <Link href="/contact" className="button button--primary">
-              Contact us
+              {copy.contactAction}
             </Link>
           </div>
         </div>

@@ -1,14 +1,13 @@
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { company } from '@/content/pages'
+import { company, siteCopy } from '@/content/pages'
 
 export const metadata = {
   metadataBase: new URL('https://www.ringindia.net'),
   title: {
-    default:
-      'Ring India — Outbound Telemarketing, Call Center Services & Lead Generation',
-    template: '%s | Ring India',
+    default: siteCopy.metaTitle,
+    template: `%s | ${company.name}`,
   },
   description: company.description,
   applicationName: company.name,
@@ -22,7 +21,7 @@ export const metadata = {
     type: 'website',
     siteName: company.name,
     url: '/',
-    title: 'Ring India — Outbound Telemarketing, Call Center Services & Lead Generation',
+    title: siteCopy.metaTitle,
     description: company.description,
   },
 }
@@ -53,7 +52,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <a className="skip-link" href="#main">
-          Skip to content
+          {siteCopy.ui.skipLink}
         </a>
         <Header />
         <main id="main" className="page-body">

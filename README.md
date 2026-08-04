@@ -65,9 +65,15 @@ app/
 
 components/                 Header, Footer, Sidebar, PageLayout, LeadCard
 content/
-├── pages.js                company facts, homepage cards, page lookup
-├── pages.generated.json    ← extracted page copy (source data, edit freely)
-└── nav.js                  navigation taxonomy
+├── pages.js                resolver — picks a content version, exposes it
+├── content-version.js      which version is live (NEXT_PUBLIC_CONTENT_VERSION)
+├── pages.generated.json    'legacy' page copy, as extracted from the old site
+├── pages.rewritten.json    ← 'rewrite' page copy (live by default, edit freely)
+├── copy.legacy.js          'legacy' company facts, home cards, UI strings
+├── copy.rewritten.js       'rewrite' company facts, home cards, UI strings
+├── nav.js                  resolver — picks a label set
+├── nav.legacy.js           'legacy' nav labels and taxonomy
+└── nav.rewritten.js        'rewrite' nav labels (identical hrefs)
 scripts/
 ├── extract-content.mjs     one-shot legacy importer
 └── check-links.mjs         link + anchor crawler
@@ -76,14 +82,48 @@ legacy/                     the original site, frozen — input for the importer
 reference/screenshots/      before/after
 ```
 
+### Two content versions, one switch
+
+The site ships two complete sets of wording and renders whichever one
+`NEXT_PUBLIC_CONTENT_VERSION` names:
+
+| Value | What renders | Files |
+|---|---|---|
+| `rewrite` *(default)* | the 2026 content rewrite | `pages.rewritten.json`, `copy.rewritten.js` |
+| `legacy` | the original wording, unedited | `pages.generated.json`, `copy.legacy.js` |
+
+```bash
+npm run build                                   # rewrite (default)
+NEXT_PUBLIC_CONTENT_VERSION=legacy npm run build   # back to the original copy
+```
+
+On Vercel it's the same variable under Project → Settings → Environment
+Variables, then redeploy. **Reverting the rewrite is that one value** — no code
+change, no `git revert`, and the old copy is never deleted from the repo. An
+unrecognised value fails the build rather than silently serving the wrong text.
+
+The switch covers every word on the site — the 43 content pages, the homepage,
+contact, careers, the 404, and the chrome: nav labels, sidebar group titles,
+footer, breadcrumb, skip link and button text. Nothing downstream knows which
+version it is looking at: routes and components read `content/pages.js` and
+`content/nav.js`, which resolve the version once and export the same shape
+either way.
+
+`scripts/verify-project.mjs` guards the pairing — both versions must cover all
+43 slugs, keep every anchor the nav links to, expose the same copy keys, and
+point at exactly the same set of URLs. So the version you aren't currently
+serving can't rot, and a label rewrite can't quietly move a link.
+
 ### Content is data, not markup
 
-`content/pages.generated.json` holds each page's heading, meta description,
-keywords and body HTML. To change wording, **edit that file directly**.
+`content/pages.rewritten.json` holds each page's heading, meta description,
+keywords and body HTML for the live version. To change wording, **edit that file
+directly**. `content/pages.generated.json` is the same shape for `legacy`; treat
+it as an archive and leave it alone.
 
-`npm run extract` regenerates it from the archived HTML in `legacy/` and will
-overwrite your edits — it's an import tool, not part of the build. It
-is committed so the conversion is reproducible and auditable.
+`npm run extract` regenerates `pages.generated.json` from the archived HTML in
+`legacy/` — it's an import tool, not part of the build, and it does not touch
+the rewrite. It is committed so the conversion is reproducible and auditable.
 
 The extractor lifts the `<td width="70%">` content cell out of each legacy page
 and strips scripts, ad tags, forms, HTML comments and every presentational

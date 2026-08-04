@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function LeadCard({ title, href, body }) {
+export default function LeadCard({ title, href, body, cta }) {
   return (
     <li className="lead-card">
       <h3>
@@ -8,7 +8,7 @@ export default function LeadCard({ title, href, body }) {
       </h3>
       <p>{body}</p>
       <span className="lead-card__cta" aria-hidden="true">
-        Get a free quote →
+        {cta}
       </span>
     </li>
   )
