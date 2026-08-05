@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="shell">
         <div className="site-footer__meta">
           <p style={{ margin: 0 }}>
-            © {company.established}–{new Date().getFullYear()} {company.name} — {ui.footerRights}
+            © {company.established} {company.name} — {ui.footerRights}
           </p>
           <ul className="site-footer__legal">
             {legalNav.map((item) => (
