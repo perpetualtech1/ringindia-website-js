@@ -17,7 +17,7 @@ const groups = [
 
 export default function SiteMapPage() {
   return (
-    <PageLayout heading={siteCopy.siteMap.heading} showSidebar={false}>
+    <PageLayout heading={siteCopy.siteMap.heading} showSidebar={false} path="/site-map">
       <div className="sitemap-grid">
         {groups.map((group) => (
           <section key={group.title}>
