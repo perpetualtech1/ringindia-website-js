@@ -14,7 +14,7 @@ const body = encodeURIComponent(copy.mailBody.join('\n'))
 
 export default function CareersPage() {
   return (
-    <PageLayout heading={copy.heading}>
+    <PageLayout heading={copy.heading} path="/careers">
       <div className="prose">
         <p>{copy.intro}</p>
         <p>{copy.body}</p>
