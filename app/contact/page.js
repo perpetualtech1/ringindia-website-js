@@ -14,7 +14,7 @@ const body = encodeURIComponent(copy.mailBody.join('\n'))
 
 export default function ContactPage() {
   return (
-    <PageLayout heading={copy.heading}>
+    <PageLayout heading={copy.heading} path="/contact">
       <div className="contact-grid">
         <div>
           <p>
@@ -43,6 +43,10 @@ export default function ContactPage() {
             <dd>
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </dd>
+            <dt>{siteCopy.ui.contactPhoneLabel}</dt>
+            <dd>{company.phone}</dd>
+            <dt>{siteCopy.ui.contactAddressLabel}</dt>
+            <dd>{company.address}</dd>
             <dt>{siteCopy.ui.contactHqLabel}</dt>
             <dd>{company.headquarters}</dd>
             <dt>{siteCopy.ui.contactSinceLabel}</dt>
